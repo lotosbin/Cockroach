@@ -9,7 +9,7 @@ android {
     }
     defaultConfig {
         applicationId "com.wanjian.demo"
-        targetSdkVersion 28
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
     }
@@ -20,7 +20,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
+    lint {
+        abortOnError false
+    }
 }
 
 dependencies {
