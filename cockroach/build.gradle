@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.library'
+    id 'kotlin-android'
 }
 archivesBaseName = "cockroach"
 android {
@@ -21,4 +22,13 @@ android {
 dependencies {
     //android 11
     implementation 'me.weishu:free_reflection:3.0.1'
+}
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+            }
+        }
+    }
 }
